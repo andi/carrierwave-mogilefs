@@ -85,7 +85,7 @@ module CarrierWave
         #
         # @return [String] url to file
         def url
-          "#{@mogilefs_folder}/#{@key}"
+          "#{@mogilefs_folder}/#{@key}".sub(/\/\//, '/')
         end
 
         # Writes the supplied data into an object in MogileFS
